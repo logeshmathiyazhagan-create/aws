@@ -13,7 +13,9 @@ Load balancing for efficient traffic distribution
 Cost optimization using dynamic resource allocation
 Fault-tolerant infrastructure
 Seamless user experience under heavy load
+
  **Architecture**
+ 
 🔹 Components
 1. Compute Layer
 Amazon EC2
