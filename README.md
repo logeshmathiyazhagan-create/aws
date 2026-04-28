@@ -80,11 +80,13 @@ CPU > 70% → Scale Out
 CPU < 30% → Scale In
 
 ** Frontend**
+
 Hosted on EC2 instances
 Built using HTML, CSS, JavaScript
 Accessible via Load Balancer DNS
 
 ** Backend**
+
 Runs on EC2 or serverless services
 Handles business logic and API requests
 🛠️ Technologies Used
@@ -95,11 +97,22 @@ AWS Auto Scaling
 Elastic Load Balancing
 CloudWatch
 RDS / DynamoDB
+
 **Advantages**
 ✔ High Availability
+
 ✔ Scalability
+
+
 ✔ Cost Efficiency
+
 ✔ Fault Tolerance
+
 ✔ Improved Performance
-🏁 Conclusion
+
+ Conclusion
+
+This project demonstrates how to build a scalable and reliable cloud application using Auto Scaling in AWS. By automatically adjusting resources based on demand, the system ensures optimal performance while minimizing operational costs. It is a practical implementation of modern cloud infrastructure principles used in real-world applications.
+
+ THANK YOU
 
