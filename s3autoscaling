@@ -1,0 +1,188 @@
+ Architecture Components
+1. Compute Layer
+
+
+Amazon EC2 instances
+
+
+Runs your web application
+
+
+
+2. Load Balancer
+
+
+Elastic Load Balancing
+
+
+Distributes incoming traffic across multiple servers
+
+
+
+3. Auto Scaling Group (ASG)
+
+
+Maintains desired number of EC2 instances
+
+
+Automatically adds/removes instances
+
+
+
+4. Launch Template
+
+
+Blueprint for EC2 instances
+
+
+Includes:
+
+
+AMI
+
+
+Instance type
+
+
+Security groups
+
+
+
+
+
+5. Database Layer
+
+
+Amazon RDS
+
+
+Stores application data
+
+
+
+6. Monitoring
+
+
+Amazon CloudWatch
+
+
+Tracks CPU, traffic, health
+
+
+
+🔄 Workflow of the Project
+
+
+User sends request
+
+
+Load Balancer receives traffic
+
+
+Traffic is distributed to EC2 instances
+
+
+CloudWatch monitors CPU usage
+
+
+Auto Scaling Group reacts:
+
+
+High CPU → Launch new instances
+
+
+Low CPU → Terminate extra instances
+
+
+
+
+
+📈 Scaling Policies
+🔹 Target Tracking
+
+
+Maintain CPU at (e.g., 50%)
+
+
+🔹 Step Scaling
+
+
+Add/remove instances in steps
+
+
+🔹 Scheduled Scaling
+
+
+Scale based on time (e.g., peak hours)
+
+
+
+⚙️ Basic Setup Steps
+Step 1: Launch EC2 & create AMI
+
+
+Install app
+
+
+Create image (AMI)
+
+
+
+Step 2: Create Launch Template
+
+
+Select AMI
+
+
+Choose instance type
+
+
+
+Step 3: Create Load Balancer
+
+
+Application Load Balancer
+
+
+Attach target group
+
+
+
+Step 4: Create Auto Scaling Group
+
+
+Attach launch template
+
+
+Set:
+
+
+Min: 2
+
+
+Max: 5
+
+
+Desired: 2
+
+
+
+
+
+Step 5: Configure Scaling Policy
+
+
+Example:
+
+
+CPU > 70% → add instance
+
+
+CPU < 30% → remove instance
+
+
+
+
+
+
+
